@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Digital | Feitosa de Souza</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        
+    }
+.clock {
+    background-color: black;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 50px;
+    span:not(:last-child):after {
+            content: ':';
+    color: white;
+    margin-left: 25px;
+    span::after {
+                content: ':';
+}
+}
+
+
+}
+.h2 {
+    background-color: black;
+    height: 100vh;
+    color: white;
+}
+.h2 strong {
+    color: blueviolet;
+    height: 100vh;
+}
+.link {
+    background: red;
+    margin-top: 20px;    
+    
+}
+.link{
+    a: yellow;
+    
+}
+.navegar {
+    height: 100vh;
+}
+.relogiodigital {
+   margin: 10px;
+       
+}
+</style>
+<body>
+    <div class="clock">
+        <span id="hours">00</span>
+        <span id="minutes">00</span>
+        <span id="seconds">00</span>
+    </div>
+
+   
+    <script>
+const hoursElement = document.getElementById('hours')
+const minutesElement = document.getElementById('minutes')
+const secondsElement = document.getElementById('seconds')
+
+function newtime(){
+    const date = new Date();
+
+const hours = date.getHours()
+const minutes = date.getMinutes()
+const seconds = date.getSeconds()
+
+hoursElement.textContent = fixTime(hours)
+minutesElement.textContent = fixTime(minutes)
+secondsElement.textContent = fixTime(seconds)
+}
+
+
+function fixTime(time){
+    return time < 10 ? '0'+time : time 
+}
+newtime()
+setInterval(newtime, 1000)
+
+    </script>
+<div class="h2">
+<h2>Powered by <strong>Feitosa de Souza</strong></h2>
+</div>
+
+<ul>
+<li><a href="#Desce">Desce pro fim da página.</a></li>
+<li><a href="#segunda">Descer para a segunda explicação sobre link.</a></li>
+</ul>
+
+    <main class="link">
+<a href="https://souzaderecife.github.io/calculadora">calculadora</a>
+    </main>
+
+<main class="relogiodigital">
+<img src="C:\Users\Modelobpe\Documents\Relógio\relogio.jpg" height="500px">
+
+</main>
+
+<div class="navegar">
+<h2><a name="Desce">Sobe.</a></h2>
+Esse link é para navegação dentro da página.
+</div>
+
+
+<h2><a name="segunda">Sobe.</a></h2>
+Essa é a segunda explicação sobre link.
+</body>
+</html>
