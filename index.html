@@ -3,116 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relógio Digital | Feitosa de Souza</title>
+    <title>Document</title>
 </head>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        
-    }
-.clock {
-    background-color: black;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    font-size: 50px;
-    span:not(:last-child):after {
-            content: ':';
-    color: white;
-    margin-left: 25px;
-    span::after {
-                content: ':';
-}
-}
-
-
-}
-.h2 {
-    background-color: black;
-    height: 100vh;
-    color: white;
-}
-.h2 strong {
-    color: blueviolet;
-    height: 100vh;
-}
-.navegar {
-    height: 100vh;
-}
-.relogiodigital {
-   margin: 10px;
-       
-}
-a:link{
-    text-decoration: none;
-    color: black;
-    background-color: aquamarine;
-}
-a:hover{
-    text-decoration: none;
-    color: aquamarine;
-    background-color: black;
-}
-
-</style>
 <body>
-    <div class="clock">
-        <span id="hours">00</span>
-        <span id="minutes">00</span>
-        <span id="seconds">00</span>
+    <video id="vid">
+        <source src=".mp4">
+    </video>
+    <div>
+        <button type="button" onclick="play{}">play</button>
     </div>
-
-    <audio autoplay></audio>
-   
     <script>
-const hoursElement = document.getElementById('hours')
-const minutesElement = document.getElementById('minutes')
-const secondsElement = document.getElementById('seconds')
-
-function newtime(){
-    const date = new Date();
-
-const hours = date.getHours()
-const minutes = date.getMinutes()
-const seconds = date.getSeconds()
-
-hoursElement.textContent = fixTime(hours)
-minutesElement.textContent = fixTime(minutes)
-secondsElement.textContent = fixTime(seconds)
-}
-
-
-function fixTime(time){
-    return time < 10 ? '0'+time : time 
-}
-newtime()
-setInterval(newtime, 1000)
-
+        var video;
+        function iniciar{
+        video= document.getElementById{"vid"};
+        }
+        function play(){
+        video.play();
+        }
     </script>
-<div class="h2">
-<h2>Powered by <strong>Feitosa de Souza</strong></h2>
-</div>
-
-<ul>
-<li><a href="#Desce">Desce pro fim da página.</a></li>
-<p>.</p>
-<li><a href="#segunda">Descer para a segunda explicação sobre link.</a></li>
-<h1>Aplicativo Calculadora</h1>
-<li><a href="https://souzaderecife.github.io/calculadora/"><img src="Nova pasta/desenho-de-adesivo-com-calculadora-isolada_1308-60994.png" height="300px"></a></li>
-
-</ul>
-
-<div class="navegar">
-<h2><a name="Desce">Sobe.</a></h2>
-Esse link é para navegação dentro da página.
-</div>
-
-
-<h2><a name="segunda">Sobe.</a></h2>
-Essa é a segunda explicação sobre link.
 </body>
-</html>
+    </html>
+        
